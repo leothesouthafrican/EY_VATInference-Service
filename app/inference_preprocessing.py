@@ -12,7 +12,7 @@ def preprocess_input(json_data, transformer):
 
     # Fill missing values and ensure correct data type
     input_df['Description'].fillna('', inplace=True)
-    if 'VAT CODE' in input_df columns:
+    if 'VAT CODE' in input_df.columns:
         input_df.drop('VAT CODE', axis=1, inplace=True)
 
     # Check if 'Month' column exists and handle different formats
